@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>mongodb</artifactId>
+        <groupId>it</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <groupId>it</groupId>
+    <artifactId>mongodb-ear</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>ear</packaging>
+
+
+
+
+
+
+    <properties>
+        <bundleFileName>${project.parent.artifactId}-${project.version}.war</bundleFileName>
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.parent.groupId}</groupId>
+            <artifactId>${project.parent.artifactId}-ejb</artifactId>
+            <version>${project.parent.version}</version>
+            <type>ejb</type>
+        </dependency>
+
+        <dependency>
+            <groupId>${project.parent.groupId}</groupId>
+            <artifactId>${project.parent.artifactId}-web</artifactId>
+            <version>${project.parent.version}</version>
+            <type>war</type>
+        </dependency>
+
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.enterprise</groupId>
+            <artifactId>cdi-api</artifactId>
+            <!-- Use version 2.0 for Weld 3 -->
+            <version>1.2</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <!--suppress MavenModelInspection -->
+        <finalName>${project.parent.artifactId}-${project.parent.version}-r$</finalName>
+        <!--<finalName>${project.parent.artifactId}-${project.parent.version}</finalName>-->
+        <plugins>
+            <plugin>
+                <executions>
+                    <execution>
+                        <id>generate-application-xml</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>generate-application-xml</goal>
+                            <goal>ear</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>2.10</version>
+                <configuration>
+                    <displayName>${project.artifactId}</displayName>
+                    <encoding>UTF-8</encoding>
+                    <version>6</version>
+                    <defaultLibBundleDir>APP-INF/lib</defaultLibBundleDir>
+                    <filtering>true</filtering>
+                    <archive>
+                        <manifestEntries>
+                            <Created-By>${project.organization.name}</Created-By>
+                            <!--suppress MavenModelInspection -->
+                            <Esselunga-Version>${project.version}-r</Esselunga-Version>
+                            <Weblogic-Application-Version>1</Weblogic-Application-Version>
+                            <!--suppress MavenModelInspection -->
+                            <Specification-Version>1</Specification-Version>
+                            <!--suppress MavenModelInspection -->
+                            <Implementation-Version>1</Implementation-Version>
+                        </manifestEntries>
+                    </archive>
+                    <generatedDescriptorLocation>${project.basedir}/src/main/application/META-INF/
+                    </generatedDescriptorLocation>
+                    <earSourceExcludes>.beabuild.txt, APP-INF/classes/**/**.*, META-INF/datasource/**.xml
+                    </earSourceExcludes>
+                    <modules>
+                        <webModule>
+                            <groupId>${project.parent.groupId}</groupId>
+                            <artifactId>${project.parent.artifactId}-web</artifactId>
+                            <contextRoot>/mongodb</contextRoot>
+                        </webModule>
+                    </modules>
+                </configuration>
+            </plugin>
+
+
+
+
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/test/java/resources</directory>
+            </resource>
+        </resources>
+    </build>
+
+
+</project>
