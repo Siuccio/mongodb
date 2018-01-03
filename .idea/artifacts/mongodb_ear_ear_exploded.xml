@@ -1,0 +1,32 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="mongodb-ear:ear exploded">
+    <output-path>$PROJECT_DIR$/mongodb-ear/target/mongodb-1.0-SNAPSHOT-r$</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="mongodb-ear/javaeeApplication/JavaEE" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/mongodb-ear/target/mongodb-1.0-SNAPSHOT-r$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/mongodb-ear/src/main/application" />
+      <element id="archive" name="mongodb-ejb-1.0-SNAPSHOT.jar">
+        <element id="artifact" artifact-name="mongodb-ejb:ejb exploded" />
+      </element>
+      <element id="archive" name="mongodb-web-1.0-SNAPSHOT.war">
+        <element id="artifact" artifact-name="mongodb-web:war exploded" />
+      </element>
+      <element id="directory" name="APP-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax:javaee-api:8.0" />
+          <element id="library" level="project" name="Maven: com.sun.mail:javax.mail:1.6.0" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Maven: javax.enterprise:cdi-api:1.2" />
+          <element id="library" level="project" name="Maven: javax.el:javax.el-api:3.0.0" />
+          <element id="library" level="project" name="Maven: javax.interceptor:javax.interceptor-api:1.2" />
+          <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Maven: org.mongodb:mongodb-driver:3.6.1" />
+          <element id="library" level="project" name="Maven: org.mongodb:bson:3.6.1" />
+          <element id="library" level="project" name="Maven: org.mongodb:mongodb-driver-core:3.6.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="mongodb-ear:ear">
+    <output-path>$PROJECT_DIR$/mongodb-ear/target</output-path>
+    <root id="archive" name="mongodb-1.0-SNAPSHOT-r$.ear">
+      <element id="artifact" artifact-name="mongodb-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

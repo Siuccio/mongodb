@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mongodb-ejb:war">
+    <output-path>$PROJECT_DIR$/mongodb-ejb/target</output-path>
+    <root id="archive" name="mongodb-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="mongodb-ejb:war exploded" />
+    </root>
+  </artifact>
+</component>

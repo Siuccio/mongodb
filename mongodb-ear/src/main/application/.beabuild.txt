@@ -1,0 +1,7 @@
+C\:/sviluppo/workspace/carte-prepagate-bo/carteprepagate-ejb/target/classes = carteprepagate-ejb-1.0.4.jar
+C\:/sviluppo/workspace/carte-prepagate-bo/carteprepagate-web/src/main/webapp = carteprepagate-web-1.0.4.war
+C\:/sviluppo/workspace/carte-prepagate-bo/carteprepagate-web/target/classes = carteprepagate-web-1.0.4.war/WEB-INF/classes
+C\:/sviluppo/workspace/carte-prepagate-bo/internal-carteprepagate-web/src/main/webapp = internal-carteprepagate-web-1.0.4.war
+C\:/sviluppo/workspace/carte-prepagate-bo/internal-carteprepagate-web/target/classes = internal-carteprepagate-web-1.0.4.war/WEB-INF/classes
+C\:/sviluppo/workspace/carte-prepagate-bo/broker-carteprepagate-web/src/main/webapp = broker-carteprepagate-web-1.0.4.war
+C\:/sviluppo/workspace/carte-prepagate-bo/broker-carteprepagate-web/target/classes = broker-carteprepagate-web-1.0.4.war/WEB-INF/classes

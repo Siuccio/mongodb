@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mongodb-web:war">
+    <output-path>$PROJECT_DIR$/mongodb-web/target</output-path>
+    <root id="archive" name="mongodb-web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="mongodb-web:war exploded" />
+    </root>
+  </artifact>
+</component>
